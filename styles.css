@@ -22,9 +22,9 @@
     /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
-    --spacing-md: 2rem;
-    --spacing-lg: 4rem;
-    --spacing-xl: 6rem;
+    --spacing-md: 2.5rem;
+    --spacing-lg: 5rem;
+    --spacing-xl: 10rem;
 
     /* Typography */
     --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
@@ -232,13 +232,13 @@ body {
    ======================================== */
 .section-header {
     text-align: center;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
 }
 
 .section-header h2 {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
 }
 
 .section-header p {
@@ -246,6 +246,7 @@ body {
     color: var(--text-secondary);
     max-width: 600px;
     margin: 0 auto;
+    line-height: 1.8;
 }
 
 /* ========================================
@@ -254,17 +255,18 @@ body {
 .problem {
     padding: var(--spacing-xl) 0;
     background: linear-gradient(180deg, transparent, rgba(26, 26, 46, 0.5), transparent);
+    margin-top: var(--spacing-lg);
 }
 
 .problem-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing-md);
+    gap: var(--spacing-lg);
 }
 
 .problem-card {
     background: var(--dark-card);
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
     border-radius: var(--border-radius);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
@@ -297,17 +299,19 @@ body {
    ======================================== */
 .features {
     padding: var(--spacing-xl) 0;
+    margin-top: var(--spacing-lg);
 }
 
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-md);
+    gap: var(--spacing-lg);
+    row-gap: var(--spacing-lg);
 }
 
 .feature-card {
     background: var(--dark-card);
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
     border-radius: var(--border-radius);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.4s ease;
@@ -355,6 +359,7 @@ body {
 .how-it-works {
     padding: var(--spacing-xl) 0;
     background: linear-gradient(180deg, transparent, rgba(26, 26, 46, 0.3), transparent);
+    margin-top: var(--spacing-lg);
 }
 
 .steps-container {
@@ -365,8 +370,8 @@ body {
 .step {
     display: flex;
     align-items: start;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
     opacity: 0;
     transform: translateX(-30px);
     transition: all 0.5s ease;
@@ -406,18 +411,19 @@ body {
    ======================================== */
 .social-proof {
     padding: var(--spacing-xl) 0;
+    margin-top: var(--spacing-lg);
 }
 
 .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
 }
 
 .testimonial-card {
     background: var(--dark-card);
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
     border-radius: var(--border-radius);
     border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
@@ -495,6 +501,7 @@ body {
     padding: var(--spacing-xl) 0;
     background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
     position: relative;
+    margin-top: var(--spacing-lg);
 }
 
 .waitlist-content {
@@ -736,8 +743,8 @@ body {
 
 @media (max-width: 480px) {
     :root {
-        --spacing-lg: 3rem;
-        --spacing-xl: 4rem;
+        --spacing-lg: 3.5rem;
+        --spacing-xl: 6rem;
     }
 
     .container {
@@ -751,6 +758,12 @@ body {
 
     .tag {
         text-align: center;
+    }
+
+    .feature-card,
+    .problem-card,
+    .testimonial-card {
+        padding: var(--spacing-md);
     }
 }
 
