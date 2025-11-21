@@ -111,10 +111,6 @@ waitlistForm.addEventListener('submit', async (e) => {
         // Simulated API call (replace with actual submission)
         await simulateFormSubmission(formData);
 
-        // Show success message
-        waitlistForm.style.display = 'none';
-        successMessage.classList.add('show');
-
         // Optional: Track conversion with analytics
         if (typeof gtag !== 'undefined') {
             gtag('event', 'waitlist_signup', {
